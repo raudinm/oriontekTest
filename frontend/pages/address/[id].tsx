@@ -8,8 +8,7 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-import { FormikHelpers } from 'formik';
-import { AddressProps, createOrUpdateAddress, fetchOrDeleteAddress } from 'src/repository'
+import { AddressProps, fetchOrDeleteAddress } from 'src/repository'
 
 import styles from 'styles/Address.module.css'
 import AddressForm from '@/core/AddressForm';
@@ -26,7 +25,6 @@ export default function Address({address}: {address: AddressProps}) {
     setOpenDeleteDialog(false)
     await router.replace('/')
   }
-
 
   const updateCallback = async () => {
     setOpenUpdateDialog(false)
