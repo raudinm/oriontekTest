@@ -26,7 +26,11 @@ const prepareForRequest = ({endpoint, params=null, method='GET'}: RequestParams)
   return request;
 }
 
-// create address
+/**
+ *  Create or udate an address
+ * @param {AddressProps} data Data to save or update
+ * @param {boolean} updating Determines whether to update or create a new entry
+ */
 export async function createOrUpdateAddress(data: AddressProps, updating?: boolean): Promise<AddressProps> {
 
   const request = prepareForRequest({
@@ -61,7 +65,11 @@ export async function fetchAddresses(): Promise<any> {
   return data
 }
 
-// fetch or delete an address
+/**
+ * Fetch or delete an address
+ * @param {number} addressId Id of the addrees to fetch or delete
+ * @param {boolean} deleting If true then the address will be deleted
+ */
 export async function fetchOrDeleteAddress(addressId: number, deleting: boolean): Promise<AddressProps> {
 
   const request = prepareForRequest({

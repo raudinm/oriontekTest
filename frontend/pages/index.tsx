@@ -16,6 +16,11 @@ export default function Home() {
     .then((data: AddressProps[]) => setAddresses(data))
   }, [])
 
+  
+  /**
+   * Update the address list with a new address
+   * @param {AddressProps} address The new address to be added to the list
+   */
   const updateAddressList = (address: AddressProps) => {
     setAddresses([address, ...addresses])
   }

@@ -20,12 +20,18 @@ export default function Address({address}: {address: AddressProps}) {
   const [openUpdateDialog, setOpenUpdateDialog] = React.useState(false);
 
 
+  /**
+   * Delete an address and redirect to the home page
+   */
   const handleDelete = async () => {
     await fetchOrDeleteAddress(address.id, true)
     setOpenDeleteDialog(false)
     await router.replace('/')
   }
 
+  /**
+   * Called after update an address and it replace the navigation stack with the home page
+   */
   const updateCallback = async () => {
     setOpenUpdateDialog(false)
     await router.replace('/')

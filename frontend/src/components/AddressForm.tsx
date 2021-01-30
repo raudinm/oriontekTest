@@ -66,7 +66,12 @@ const AddressForm = (
   const classes = useStyles()
   const [loading, setLoading] = React.useState(false)
 
-  // Handle address creation
+
+  /**
+   *  Handle address creation
+   * @param {AddressProps} values Address data
+   * @param {FormikHelpers<AddressProps>} formikHelpers Form helper from formik
+   */
   const handleSubmit = async (values: AddressProps, formikHelpers: FormikHelpers<AddressProps>) => {
     setLoading(true)
 
@@ -77,7 +82,12 @@ const AddressForm = (
     setLoading(false)
   }
 
-  // Handle address update
+
+  /**
+   *  Handle address update
+   * @param {AddressProps} values Address data
+   * @param {FormikHelpers<AddressProps>} formikHelpers Form helper from formik
+   */
   const handleUpdate = async (values: AddressProps, formikHelpers: FormikHelpers<AddressProps>) => {
     setLoading(true)
 
