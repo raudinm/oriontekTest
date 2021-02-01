@@ -6,7 +6,7 @@ import {
   TextField, Button, Paper, Grid, CircularProgress
 } from '@material-ui/core';
 
-import { AddressProps, createOrUpdateAddress } from "src/repository"
+import { AddressProps, createOrUpdateAddress } from "../../../src/repository"
 
 
 // Styles 

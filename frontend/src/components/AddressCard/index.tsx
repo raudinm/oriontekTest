@@ -12,7 +12,10 @@ export default function AddressCard({address}: {address: AddressProps}) {
       href={`/address/${address.id}`}
     >
       <div className={styles.card}>
-        <h3>{address.fullName} &rarr;</h3>
+        <div style={{display: "flex", flexDirection: "row"}}>
+          <h3>{address.fullName}</h3>
+          <h3>&rarr;</h3>
+        </div>
         <p>Dirección: {address.address}</p>
         <p>Ciudad: {address.city}</p>
         <p>Estado: {address.state}</p>
